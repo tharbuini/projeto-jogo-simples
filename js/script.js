@@ -2,6 +2,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
+const retry = document.querySelector('.retry');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -31,6 +32,8 @@ const loop = setInterval(() => {
         clouds.style.animation = 'none';
         clouds.style.left = `${cloudsPosition}px`;
 
+        retry.classList.add('retry-show');
+        
         clearInterval(loop);
     }
 

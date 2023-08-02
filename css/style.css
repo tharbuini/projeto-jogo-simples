@@ -37,6 +37,24 @@
     animation: clouds-animation 10s infinite linear;
 }
 
+.retry {
+    position: relative;
+    top: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 0%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.retry-show {
+    user-select: initial;
+    pointer-events: initial;
+    animation: retry-animation 750ms infinite ease-out; 
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
@@ -76,5 +94,15 @@
 
     to {
         right: 100%;
+    }
+}
+
+@keyframes retry-animation {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
     }
 }
